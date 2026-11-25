@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useOutletContext } from "react-router";
 import { usePlaylists } from "../hooks/useAlbum.js";
 
-const ALL_QUERY = "limit=100&sort=name"; 
+const ALL_QUERY = "limit=100&sort=name";
 function formatTotal(seconds) {
   const h = Math.floor(seconds / 3600);
   const m = Math.floor((seconds % 3600) / 60);
@@ -37,10 +37,14 @@ function Dashboard() {
 
   const filtered = genre ? albums.filter((a) => a.genre === genre) : albums;
 
-  const allSongs = filtered.flatMap((a) => a.songs);
+  // У песен в разных альбомах одинаковые id, поэтому для избранного
+  // сравниваем по уникальному ключу "<альбом>-<песня>".
+  const allSongs = filtered.flatMap((a) =>
+    a.songs.map((s) => ({ ...s, key: `${a.id}-${s.id}` })),
+  );
   const totalSeconds = allSongs.reduce((sum, s) => sum + toSeconds(s.duration), 0);
   const likedIds = new Set(likedSongs.map((s) => s.id));
-  const likedCount = allSongs.filter((s) => likedIds.has(s.id)).length;
+  const likedCount = allSongs.filter((s) => likedIds.has(s.key)).length;
 
   const stats = [
     { label: "Playlists", value: filtered.length },

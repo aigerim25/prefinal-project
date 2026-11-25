@@ -332,3 +332,1129 @@ button.bar-row {
 .about-page h1 {
   color: burlywood;
 }
+.auth-page, .profile-page { 
+  max-width: 380px; 
+  margin: 2rem auto; 
+  display: flex; 
+  flex-direction: 
+  column; gap: 1rem; }
+.auth-form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.75rem; }
+.auth-form label { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.25rem; 
+}
+.auth-form input {
+  padding: 0.6rem; 
+  border: 1px solid #ccc; 
+  border-radius: 6px; 
+  font: inherit; 
+}
+.auth-form input[aria-invalid="true"] { 
+  border-color: #d33; }
+.field-error, .form-error { 
+  color: #d33; 
+  font-size: 0.875rem; 
+}
+.auth-divider { 
+  text-align: center; 
+  opacity: 0.6; 
+}
+.profile-info { 
+  display: grid; 
+  grid-template-columns: auto 1fr; 
+  gap: 0.4rem 1rem; 
+}
+.profile-info dd { 
+  margin: 0; 
+  overflow-wrap: anywhere; 
+}
+.avatar { 
+  width: 72px; 
+  height: 72px; 
+  border-radius: 50%; 
+}
+.navbar-auth { 
+  display: flex;
+  gap: 1rem; 
+  align-items: center; 
+  margin-left: auto; 
+}
+.update-prompt {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  max-width: 420px;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #2b2b2b;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  font-size: 14px;
+}
+.update-prompt__text {
+  margin: 0;
+  flex: 1 1 180px;
+}
+.update-prompt__actions {
+  display: flex;
+  gap: 8px;
+}
+.update-prompt__btn {
+  min-height: 44px; /* удобно нажимать пальцем */
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.update-prompt__btn--primary {
+  border-color: #deb887;
+  background: #deb887;
+  color: #2b2b2b;
+  font-weight: bold;
+}
+.cached-notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 8px 16px;
+  background: #eef3fb;
+  color: #2f4a73;
+  border-bottom: 1px solid #c3d3ec;
+  font-size: 13px;
+}
+.cached-notice__btn {
+  margin-left: auto;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.network-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  font-size: 13px;
+}
+.network-status__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+/* Online: скромная метка справа */
+.network-status--online {
+  justify-content: flex-end;
+  color: #2e8b57;
+}
+
+/* Offline: заметная полоса на всю ширину */
+.network-status--offline {
+  background: #fff4e0;
+  color: #8a4b00;
+  border-bottom: 1px solid #f0c27a;
+}
+
+/* Back online: зелёная полоса на 3 секунды */
+.network-status--back {
+  background: #e7f6ec;
+  color: #1f6b3a;
+  border-bottom: 1px solid #9fd6b2;
+}
+.network-status__link {
+  margin-left: auto;
+  color: inherit;
+  font-weight: bold;
+}
+.offline-page {
+  max-width: 440px;
+  margin: 48px auto;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.offline-page__icon {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #deb887;
+  color: #fff;
+  font-size: 36px;
+}
+
+.offline-page h1 {
+  margin: 0;
+  color: burlywood;
+}
+
+.offline-page p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.offline-page__hint {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.offline-page__retry {
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 999px;
+  background: #deb887;
+  color: #2b2b2b;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.offline-page__retry:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.offline-page__error {
+  color: #d33;
+  font-size: 14px;
+}
+
+.offline-page__ok {
+  color: #2e8b57;
+  font-size: 14px;
+}
+
+.offline-page__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+/* Playbar css*/
+:root {
+  --player-h: 72px;
+  --player-gap: 16px;
+}
+
+.player {
+  position: fixed;
+  left: calc(var(--sidebar-w, 0px) + 24px);
+  right: 24px;
+  bottom: var(--player-gap);
+  z-index: 900;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: var(--player-h);
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1.2fr) auto minmax(140px, 2fr) auto auto;
+  grid-template-areas: "cover info controls progress volume close";
+  align-items: center;
+  gap: 10px 16px;
+  padding: 10px 16px;
+  border: 1px solid rgba(139, 94, 60, 0.18);
+  border-radius: 22px;
+  background: rgba(255, 250, 244, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(60, 35, 15, 0.18);
+  color: var(--text, #3b2a1e);
+  font-size: 14px;
+  text-align: left;
+}
+
+.player__cover {
+  grid-area: cover;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: var(--accent-soft, #deb887);
+}
+
+.player__info {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.player__title,
+.player__artist {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.player__artist {
+  color: var(--muted, #8a7563);
+  font-size: 13px;
+}
+
+.player__error {
+  color: #b3261e;
+  font-size: 12px;
+}
+
+.player__controls {
+  grid-area: controls;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.player__btn {
+  min-width: 44px; /* удобно нажимать пальцем */
+  min-height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--accent, #8b5e3c);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.player__btn:hover:not(:disabled) {
+  background: rgba(139, 94, 60, 0.1);
+}
+
+.player__btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.player__btn--play {
+  background: var(--accent, #8b5e3c);
+  color: #fff;
+  font-weight: bold;
+}
+
+.player__btn--play:hover:not(:disabled) {
+  background: #74492b;
+}
+
+.player__progress {
+  grid-area: progress;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.player__progress input {
+  flex: 1;
+  min-width: 0;
+  accent-color: var(--accent, #8b5e3c);
+}
+
+.player__time {
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  color: var(--muted, #8a7563);
+}
+
+.player__volume {
+  grid-area: volume;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.player__volume input {
+  width: 90px;
+  accent-color: var(--accent, #8b5e3c);
+}
+
+.player__close {
+  grid-area: close;
+  color: var(--muted, #8a7563);
+}
+
+/* Панель не закрывает низ страницы и плашку "New version" */
+body.has-player main {
+  padding-bottom: calc(var(--player-h) + var(--player-gap) * 3);
+}
+
+body.has-player .update-prompt {
+  bottom: calc(var(--player-h) + var(--player-gap) * 2);
+}
+
+/* ---------- Телефон ---------- */
+@media (max-width: 900px) {
+  :root {
+    --player-h: 112px;
+    --player-gap: 8px;
+  }
+
+  .player {
+    left: 8px;
+    right: 8px;
+    bottom: calc(8px + env(safe-area-inset-bottom));
+    grid-template-columns: 44px minmax(0, 1fr) auto auto;
+    grid-template-areas:
+      "cover info controls close"
+      "progress progress progress progress";
+    gap: 6px 8px;
+    padding: 8px 10px;
+    border-radius: 18px;
+  }
+
+  .player__cover {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* На телефоне громкость меняют кнопками самого телефона */
+  .player__volume {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .player__controls .player__btn:first-child {
+    display: none; /* "назад" прячем, чтобы всё влезло в 320px */
+  }
+}
+
+
+/* New NavBar css */ 
+/* ---------- Цвета всего приложения ---------- */
+:root {
+  --bg: #fbf7f2;            /* фон страницы */
+  --surface: #ffffff;       /* карточки */
+  --sidebar: #f3ebe1;       /* боковое меню */
+  --line: #e6d9c9;          /* линии и рамки */
+  --text: #3b2a1e;          /* основной текст */
+  --muted: #8a7563;         /* второстепенный текст */
+  --accent: #8b5e3c;        /* тёмно-коричневый: кнопки, активный пункт */
+  --accent-soft: #deb887;   /* светло-коричневый (burlywood) */
+  --sidebar-w: 240px;
+  --topbar-h: 56px;
+}
+
+/* Убираем стандартную раскладку Vite (центрирование, отступы у #root) */
+body {
+  margin: 0;
+  display: block;
+  min-width: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+#root {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ---------- Раскладка: меню слева, контент справа ---------- */
+.app-shell {
+  min-height: 100vh;
+  padding-left: var(--sidebar-w);
+}
+
+.app-content {
+  min-width: 0;
+}
+
+.app-content main {
+  padding: 24px 32px;
+}
+
+/* ---------- Боковое меню ---------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 950;
+  width: var(--sidebar-w);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 14px;
+  overflow-y: auto;
+  background: var(--sidebar);
+  border-right: 1px solid var(--line);
+}
+
+.sidebar__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px;
+  color: var(--text);
+  font-size: 19px;
+  font-weight: 800;
+  white-space: nowrap;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.brand--small {
+  font-size: 18px;
+}
+
+.brand__logo {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+}
+
+.side-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0 10px;
+  padding: 0 12px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--muted);
+}
+
+.side-search:focus-within {
+  outline: 2px solid var(--accent-soft);
+}
+
+.side-search input {
+  flex: 1;
+  min-width: 0;
+  height: 40px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  outline: none;
+}
+
+.side-title {
+  margin: 16px 10px 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.side-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.side-group--bottom {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.side-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 44px; /* удобно нажимать пальцем */
+  padding: 0 12px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 15px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.side-link svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.side-link:hover {
+  background: rgba(139, 94, 60, 0.08);
+}
+
+.side-link.active {
+  background: rgba(139, 94, 60, 0.15);
+  font-weight: 700;
+}
+
+.icon-button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* Крестик в меню нужен только на телефоне */
+.sidebar .sidebar__close {
+  display: none;
+}
+
+/* Полоска и затемнение нужны только на телефоне */
+.topbar,
+.sidebar-overlay {
+  display: none;
+}
+
+/* ---------- Телефон и узкий планшет ---------- */
+@media (max-width: 900px) {
+  .app-shell {
+    padding-left: 0;
+  }
+
+  .app-content main {
+    padding: 16px;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 800;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: var(--topbar-h);
+    padding: 0 8px;
+    background: var(--sidebar);
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* Меню спрятано за левым краем и выезжает по кнопке ☰ */
+  .sidebar {
+    width: min(300px, 85vw);
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar .sidebar__close {
+    display: grid;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 940;
+    display: block;
+    background: rgba(40, 25, 15, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  .sidebar-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+
+/* Home css*/
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home__hero {
+  margin-bottom: 28px;
+  padding: 28px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #e9d5bd 0%, #deb887 55%, #b98a5e 100%);
+  color: #3b2a1e;
+}
+
+.home__title {
+  margin: 0;
+  font-size: clamp(26px, 5vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.home__subtitle {
+  margin: 8px 0 0;
+  opacity: 0.8;
+}
+
+.home__section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.home__section-head h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.home__see-all {
+  color: var(--accent, #8b5e3c);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home__state {
+  padding: 24px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+.home__retry {
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent, #8b5e3c);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ---------- Сетка карточек ---------- */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 22px 18px;
+}
+
+.album-tile {
+  position: relative;
+  min-width: 0;
+}
+
+.album-tile__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.album-tile__cover {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 14px;
+  background: var(--accent-soft, #deb887);
+  box-shadow: 0 6px 18px rgba(60, 35, 15, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.album-tile__cover-link {
+  display: block;
+  height: 100%;
+}
+
+.album-tile__cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.album-tile__placeholder {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: #fff;
+  font-size: 48px;
+}
+
+.album-tile:hover .album-tile__cover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(60, 35, 15, 0.2);
+}
+
+.album-tile__title {
+  margin: 10px 0 2px;
+  overflow: hidden;
+  font-size: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.album-tile__artists {
+  margin: 0;
+  overflow: hidden;
+  color: var(--muted, #8a7563);
+  font-size: 13px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Круглая кнопка ▶ в углу обложки */
+.album-tile__play {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent, #8b5e3c);
+  color: #fff;
+  font-size: 15px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.album-tile:hover .album-tile__play,
+.album-tile__play:focus-visible,
+.album-tile__play.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.album-tile__play:disabled {
+  display: none;
+}
+
+/* На сенсорных экранах наведения нет: кнопка видна всегда */
+@media (hover: none) {
+  .album-tile__play {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Скелетон, пока грузится */
+.album-tile--skeleton {
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #efe4d6 25%, #f7efe5 50%, #efe4d6 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* ---------- Телефон ---------- */
+@media (max-width: 600px) {
+  .home__hero {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .album-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 12px;
+  }
+}
+
+/* lIKED CSS*/
+.liked {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.liked__hero {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding: 24px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #f3e3cf 0%, #deb887 60%, #b98a5e 100%);
+}
+
+.liked__badge {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 18px;
+  background: var(--accent, #8b5e3c);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.liked__badge svg {
+  fill: currentColor;
+}
+
+.liked__meta {
+  min-width: 0;
+}
+
+.liked__kicker {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  opacity: 0.75;
+}
+
+.liked__title {
+  margin: 4px 0;
+}
+
+.liked__count {
+  margin: 0 0 12px;
+  opacity: 0.8;
+}
+
+.liked__play-all,
+.liked__browse {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent, #8b5e3c);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.liked__play-all:hover,
+.liked__browse:hover {
+  background: var(--accent-dark, #74492b);
+}
+
+.liked__empty {
+  padding: 32px 16px;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.03);
+  text-align: center;
+}
+
+/* ---------- Список песен ---------- */
+.liked__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.liked-row {
+  display: grid;
+  grid-template-columns: 44px 44px minmax(0, 2fr) minmax(0, 1.4fr) 56px 44px;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 8px;
+  border-radius: 12px;
+}
+
+.liked-row:hover {
+  background: rgba(139, 94, 60, 0.07);
+}
+
+.liked-row.current {
+  background: rgba(222, 184, 135, 0.3);
+}
+
+.liked-row__play {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted, #8a7563);
+  cursor: pointer;
+}
+
+.liked-row__num,
+.liked-row__icon {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.liked-row__icon {
+  opacity: 0;
+  color: var(--accent, #8b5e3c);
+}
+
+/* При наведении номер меняется на ▶ */
+.liked-row:hover .liked-row__num,
+.liked-row.current .liked-row__num {
+  opacity: 0;
+}
+
+.liked-row:hover .liked-row__icon,
+.liked-row.current .liked-row__icon {
+  opacity: 1;
+}
+
+.liked-row__cover {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: var(--accent-soft, #deb887);
+}
+
+.liked-row__info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.liked-row__title,
+.liked-row__artist,
+.liked-row__album {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.liked-row__title {
+  font-weight: 600;
+}
+
+.liked-row.current .liked-row__title {
+  color: var(--accent, #8b5e3c);
+}
+
+.liked-row__artist,
+.liked-row__album,
+.liked-row__time {
+  color: var(--muted, #8a7563);
+  font-size: 14px;
+}
+
+.liked-row__album {
+  text-decoration: none;
+}
+
+.liked-row__album:hover {
+  text-decoration: underline;
+}
+
+.liked-row__time {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.liked-row__heart {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--accent, #8b5e3c);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.liked-row__heart:hover {
+  background: rgba(139, 94, 60, 0.1);
+}
+
+/* На сенсорных экранах наведения нет: показываем ▶ всегда */
+@media (hover: none) {
+  .liked-row__num {
+    opacity: 0;
+  }
+  .liked-row__icon {
+    opacity: 1;
+  }
+}
+
+/* ---------- Телефон ---------- */
+@media (max-width: 700px) {
+  .liked__hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .liked__badge {
+    width: 88px;
+    height: 88px;
+  }
+
+  .liked-row {
+    grid-template-columns: 44px 44px minmax(0, 1fr) 44px;
+    gap: 8px;
+    padding: 4px;
+  }
+
+  /* Альбом и время прячем: на узком экране важнее название */
+  .liked-row__album,
+  .liked-row__time {
+    display: none;
+  }
+}

@@ -1,0 +1,1 @@
+export const selectAlbumDetailsStatus = (state, id) => state.albumDetails.byId[id];
