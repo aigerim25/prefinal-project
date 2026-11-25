@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import { useFavorites } from "../hooks/useFavorites";
 import { usePlaylists } from "../hooks/useAlbum.js";
 import { usePlayer } from "../hooks/usePlayer";
-import { HeartIcon } from "../components/icons.jsx";
+import { HeartIcon } from "../components/Icons.jsx";
 
 function toSeconds(duration) {
   if (typeof duration !== "string" || !duration.includes(":")) return 0;

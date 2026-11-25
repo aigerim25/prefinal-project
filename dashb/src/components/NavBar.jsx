@@ -4,7 +4,7 @@ import { useAuth } from "../hooks/useAuth";
 import {
   SearchIcon, HomeIcon, DashboardIcon, AlbumIcon, HeartIcon, InfoIcon,
   UserIcon, LoginIcon, SignupIcon, LogoutIcon, MenuIcon, CloseIcon, NoteIcon,
-} from "./icons.jsx";
+} from "./Icons.jsx";
 
 
 const APP_NAME = "Web music app";
@@ -62,7 +62,7 @@ function NavBar() {
           {APP_NAME}
         </NavLink>
       </header>
-      
+
       <div
         className={open ? "sidebar-overlay visible" : "sidebar-overlay"}
         onClick={close}
