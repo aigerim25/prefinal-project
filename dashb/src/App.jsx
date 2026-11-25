@@ -12,7 +12,7 @@ import Offline from "./components/Offline.jsx";
 const AlbumPage = lazy(() => import("./pages/AlbumPages.jsx"));
 const Dashboard = lazy(() => import("./pages/Dashboard.jsx"));
 const About = lazy(() => import("./pages/About.jsx"));
-const Signup = lazy(() => import("./pages/SignUp.jsx"));
+const Signup = lazy(() => import("./pages/Signup.jsx"));
 const Profile = lazy(() => import("./pages/Profile.jsx"));
 const Liked = lazy(() => import("./pages/Liked.jsx"));
 
